@@ -1,0 +1,18 @@
+package:
+   name: numpy
+   version: "2.0.0b1"
+
+build:
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple numpy==2.0.0b1
+
+requirements:
+  host:
+    - python
+  run:
+    - python >=3.10
+
+about:
+  home: https://numpy.org/
+  license: BSD
+  summary: a just-in-time Python function compiler based on LLVM
