@@ -7,7 +7,7 @@ package:
 build:
   number: 0
   script: PIP_NO_INDEX= python -m pip install -vv --no-deps --ignore-installed --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple/ --disable-pip-version-check numpy=={{ version }}  # [not win]
-  script: set PIP_NO_INDEX="false" && python -m pip install -vv --no-deps --ignore-installed --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple/ --disable-pip-version-check numpy=={{ version }}  # [win]
+  script: set "PIP_NO_INDEX=" && python -m pip install -vv --no-deps --ignore-installed --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple/ --disable-pip-version-check numpy=={{ version }}  # [win]
 
 requirements:
   host:
