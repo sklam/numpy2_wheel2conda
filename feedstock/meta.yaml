@@ -4,13 +4,13 @@ package:
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple numpy==2.0.0b1
+  script: PIP_NO_INDEX= python -m pip install -vv --no-deps --ignore-installed --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple/ --disable-pip-version-check numpy==2.0.0b1
 
 requirements:
   host:
     - python
   run:
-    - python >=3.10
+    - python
 
 about:
   home: https://numpy.org/
